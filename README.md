@@ -3,6 +3,8 @@ banco.js
 
 Connect to your bank using JS ;)
 
+Please read the FAQ file for more information.
+
 Setup
 ------
 
