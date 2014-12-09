@@ -14,15 +14,25 @@ var page = null;
 // Local functions
 var check = () =>
 {
-	if (ph == null || page == null)
-			throw Error ("Please log in first");
-}
+	if (ph == null)
+		throw Error ("Please log in first");
+};
+var dispose = () =>
+{
+	if (ph == null)
+		return;
+
+	ph.exit ();
+	ph = null;
+	page = null;
+};
 
 // Methods
 module.exports =
 {
 	login: async (username, password) =>
 	{
+		dispose ();
 		ph = await phantom.createAsync ();
 		page = await ph.createPageAsync ();
 		await page.openAsync (config.loginUrl);
@@ -38,6 +48,7 @@ module.exports =
 	},
 	getAccounts: async () =>
 	{
+		check ();
 		await page.openAsync (config.balanceUrl);
 		await page.waitLoad ();
 		var accounts = await page.evaluateAsync (() =>
@@ -48,6 +59,7 @@ module.exports =
 	},
 	getBalance: async () =>
 	{
+		check ();
 		await page.openAsync (config.balanceUrl);
 		await page.waitLoad ();
 		await page.evaluateAsync (id =>
@@ -60,10 +72,5 @@ module.exports =
 			.substring (2)
 			.replace ('.', ''));
 	},
-	dispose: () =>
-	{
-		ph.exit ();
-		ph = null;
-		page = null;
-	}
+	dispose: dispose
 };
