@@ -12,7 +12,7 @@ module.exports =
 {
 	login: async (username, password) =>
 	{
-		var ph = await await phantom.createAsync ();
+		var ph = await phantom.createAsync ();
 		var page = await ph.createPageAsync ();
 		await page.openAsync (config.loginUrl);
 		await page.evaluateAsync (data =>
