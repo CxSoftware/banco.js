@@ -6,17 +6,34 @@ Connect to your bank using JS ;)
 Setup
 ------
 
-Run: npm install
+Run:
+
+    npm install
 
 Compile
 -------
 
-Run: gulp
+Run:
+
+    gulp
 
 Test
 ----
 
-Run: node dist/test
+Run:
+
+    node dist/test
+
+Status
+------
+
+Right now, this is only a test for one bank: BCI.
+
+Contribute
+----------
+
+Please, feel free to fork this project and add new banks. Since the code is ECMAScript 6 (using traceur),
+make sure you follow the current style (arrow functions if possible, async functions, promises, etc).
 
 License
 -------
