@@ -1,5 +1,5 @@
 // Requirements
-var phantom = require ('./phantom.async');
+var phantom = require ('../async/phantom');
 
 // Config
 var config = {

@@ -2,8 +2,8 @@
 var traceur = require ('traceur');
 
 // Requirements
-var bci = require ('./BciPersonas');
-var readline = require ('./readline');
+var bci = require ('./banks/BciPersonas');
+var readline = require ('./async/readline');
 
 (async () =>
 {
