@@ -44,10 +44,7 @@ module.exports =
 			jQuery.map (
 				jQuery('option'),
 				x => jQuery(x).val()));
-		return accounts.map (x =>
-		{
-			return { id: x, name: x };
-		});
+		return accounts.map (x => ({ id: x, name: x }));
 	},
 	getBalance: async () =>
 	{
