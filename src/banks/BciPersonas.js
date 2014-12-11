@@ -57,7 +57,7 @@ module.exports =
 				x => jQuery(x).val()));
 		return accounts.map (x => ({ id: x, name: x }));
 	},
-	getBalance: async () =>
+	getBalance: async (id) =>
 	{
 		check ();
 		await page.openAsync (config.balanceUrl);
@@ -65,7 +65,8 @@ module.exports =
 		await page.evaluateAsync (id =>
 			jQuery ('option')
 				.filter (x => jQuery (x).val () == id)
-				.attr ('selected', true));
+				.attr ('selected', true),
+			id);
 		var balance = await page.evaluateAsync (() =>
 			jQuery ('.montos strong').first().text());
 		return parseInt (balance
