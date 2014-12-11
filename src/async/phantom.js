@@ -12,6 +12,9 @@ var includeJsAsync = (page, url) => new Promise (
 var getAsync = (page, name) => new Promise (
 	ok => page.get (name, ok));
 
+var renderAsync = (page, filename, options) => new Promise (
+	ok => page.render (filename, options, ok));
+
 var createPageAsync = (ph, log) => new Promise (ok =>
 {
 	ph.createPage (page =>
@@ -38,6 +41,7 @@ var createPageAsync = (ph, log) => new Promise (ok =>
 		page.getAsync = (name) => getAsync (page, name);
 		page.includeJsAsync = (url) => includeJsAsync (page, url);
 		page.openAsync = (url) => openAsync (page, url);
+		page.renderAsync = (filename, options) => renderAsync (page, filename, options);
 		page.waitLoad = () => new Promise (ok =>
 		{
 			if (!navigating) ok ();
