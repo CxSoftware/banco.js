@@ -1,0 +1,26 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:recommended"
+	],
+	"jsRules": {},
+	"rules": {
+		"no-console": true,
+		"indent": [true, "tabs"],
+		"quotemark": [true, "single"],
+		"linebreak-style": [true, "LF"],
+		"semicolon": [true, "always"],
+		"no-var-keyword": true,
+		"one-line": false,
+		"arrow-parens": false,
+		"curly": false,
+		"space-before-function-paren": [true, "always"],
+		"typedef-whitespace": [
+			true,
+			{
+				"call-signature": "space"
+			}
+		]
+	},
+	"rulesDirectory": []
+}

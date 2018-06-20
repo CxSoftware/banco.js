@@ -1,17 +1,37 @@
 {
   "name": "banco.js",
   "version": "1.0.0",
-  "description": "banco.js ========",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
-    "gulp": "^3.8.10",
-    "gulp-traceur": "^0.14.1",
-    "phantom": "^0.7.1",
-    "traceur": "0.0.79"
-  }
+    "@babel/cli": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.47",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/preset-typescript": "^7.0.0-beta.47",
+    "@types/jsonfile": "^4.0.1",
+    "@types/node": "^10.1.2",
+    "@types/winston": "^2.3.9",
+    "babel-eslint": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
+    "eslint-plugin-babel": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-tslint": "^8.1.3",
+    "gulp-typescript": "^4.0.2",
+    "jsonfile": "^2.4.0",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3",
+    "winston": "^2.4.2"
+  },
+  "devDependencies": {},
+  "description": ""
 }

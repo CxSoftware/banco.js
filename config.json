@@ -1,0 +1,8 @@
+{
+	"log":
+	{
+		"enabled": true,
+		"level": "info",
+		"timestamp": true
+	}
+}
